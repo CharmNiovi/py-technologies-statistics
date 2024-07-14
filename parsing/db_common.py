@@ -20,3 +20,4 @@ def save_to_db_hard_skills_and_count(words_counter: Counter, db=DB):
         [(key, value) for key, value in words_counter.items()]
     )
     db.commit()
+    db.close()
